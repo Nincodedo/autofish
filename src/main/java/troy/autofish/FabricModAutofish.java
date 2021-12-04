@@ -43,7 +43,7 @@ public class FabricModAutofish implements ClientModInitializer {
 
     public void tick(MinecraftClient client) {
         if (autofishGuiKey.wasPressed()) {
-            client.openScreen(AutofishScreenBuilder.buildScreen(this, client));
+            client.setScreenAndRender(AutofishScreenBuilder.buildScreen(this, client));
         }
         autofish.tick(client);
         scheduler.tick(client);

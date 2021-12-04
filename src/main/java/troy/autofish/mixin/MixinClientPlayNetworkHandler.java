@@ -28,8 +28,8 @@ public class MixinClientPlayNetworkHandler {
         if (client.isOnThread()) FabricModAutofish.getInstance().handlePacket(playSoundIdS2CPacket_1);
     }
 
-    @Inject(method = "onVelocityUpdate", at = @At("HEAD"))
-    public void onVelocityUpdate(EntityVelocityUpdateS2CPacket entityVelocityUpdateS2CPacket_1, CallbackInfo ci) {
+    @Inject(method = "onEntityVelocityUpdate", at = @At("HEAD"))
+    public void onEntityVelocityUpdate(EntityVelocityUpdateS2CPacket entityVelocityUpdateS2CPacket_1, CallbackInfo ci) {
         if (client.isOnThread()) FabricModAutofish.getInstance().handlePacket(entityVelocityUpdateS2CPacket_1);
     }
 
